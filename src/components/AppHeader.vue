@@ -10,7 +10,8 @@ export default {
 </script>
 <template >
     <div>
-        header
+        <input type="text" placeholder="film" v-model="store.searchText" @keyup.enter="$emit('search')">
+        <button @click="$emit('search')">click</button>
     </div>
 </template>
 <style lang="scss" scoped>

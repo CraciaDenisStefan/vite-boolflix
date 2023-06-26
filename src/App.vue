@@ -16,12 +16,31 @@ export default{
             store,
         }
       },
+    mounted(){
+        this.searchMovie();
+  
+      },
+    methods: {
+        searchMovie(){
+            
+            store.myUrl = store.apiUrl
+            if(store.searchText !== ''){
+                store.myUrl += `&query=${store.searchText}`;
+            }else{
+                store.myUrl += `&query=movies`;
+            }
+            store.searchText='',
+        axios.get(store.myUrl).then((response)=>{
+        store.movies=response.data.results
+        })
+        },
+    },
 }
 </script>
 
 <template>
 
-    <AppHeader/>
+    <AppHeader @search="searchMovie"/>
 
     <AppMain/>
 

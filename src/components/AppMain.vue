@@ -14,8 +14,8 @@ export default {
 }
 </script>
 <template >
-    <div>
-        <AppCardMovie/>
+    <div  v-for="(movie, index) in store.movies" :key="index">
+        <AppCardMovie :oneMovie="movie" />
     </div>
 </template>
 <style lang="scss" scoped>
