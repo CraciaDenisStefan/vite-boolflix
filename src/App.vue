@@ -22,20 +22,21 @@ export default{
       },
     methods: {
         searchMovie(){
-            store.myUrlTv = store.apiUrlTV
             store.myUrl = store.apiUrl 
             if(store.searchText !== ''){
                 store.myUrl += `&query=${store.searchText}`;
-                store.myUrlTv += `&query=${store.searchText}`;
             }else{
                 store.myUrl += `&query=movies`;
-                store.myUrlTv += `&query=tv`;
+                
             }
             store.searchText='',
         axios.get(store.myUrl).then((response)=>{
         store.movies=response.data.results
+        
         })
+     
         },
+        
     },
 }
 </script>

@@ -2,6 +2,7 @@
 import {store} from '../store.js';
 import AppCardMovie from './AppCardMovie.vue';
 
+
 export default {
     components:{
         AppCardMovie,
@@ -15,7 +16,7 @@ export default {
 </script>
 <template >
     <div  v-for="(movie, index) in store.movies" :key="index">
-        <AppCardMovie :oneMovie="movie" />
+        <AppCardMovie :oneMovie="movie"/>
     </div>
 </template>
 <style lang="scss" scoped>
