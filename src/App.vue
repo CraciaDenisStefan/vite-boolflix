@@ -27,6 +27,7 @@ export default{
                 store.myUrl += `&query=${store.searchText}`;
             }else{
                 store.myUrl += `&query=movies`;
+              
                 
             }
             store.searchText='',
