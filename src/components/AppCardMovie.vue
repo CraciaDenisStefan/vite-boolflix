@@ -27,11 +27,7 @@ export default {
 </script>
 <template >
     <div class="position-relative mt-4">      
-   
-            <img class="cover" :src="`https://image.tmdb.org/t/p/w300/${oneMovie.poster_path}`"> 
-  
-      
-
+        <img class="cover" :src="`https://image.tmdb.org/t/p/w342/${oneMovie.poster_path}`"> 
         <div class="describtion  m-2">
            <h4>Title: {{ oneMovie.title || oneMovie.name}}</h4>
            <h5>Original Title: {{ oneMovie.original_title || oneMovie.original_name }}</h5>
@@ -42,12 +38,8 @@ export default {
             <div>
                 <p>{{ oneMovie.overview }}</p>
             </div>
-     </div>
-
-        
-        
+        </div>   
     </div>
-
 </template>
 <style lang="scss" scoped>   
 .describtion {

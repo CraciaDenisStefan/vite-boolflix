@@ -11,12 +11,12 @@ export default {
 <template >
     <div class="container-fluid bg-black">
         <div class="row py-4 justify-content-between ">
-            <div class="col">
+            <div class="col ">
                 <img src="https://image.tmdb.org/t/p/w92/wwemzKWzjKYJFfCeiB57q3r4Bcm.png" alt="">
             </div>
-            <div class="col text-end">
+            <div class="col d-flex justify-content-end">
                 <input type="text" placeholder="Cerca film o serie tv" v-model="store.searchText" @keyup.enter="$emit('search')">
-                <button class="btn btn-danger mx-2" @click="$emit('search')">Cerca</button>
+                <button class="btn btn-danger mx-1 d-none d-sm-block" @click="$emit('search')">Cerca</button>
             </div>
         </div>
        
