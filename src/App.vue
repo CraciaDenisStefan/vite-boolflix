@@ -26,7 +26,7 @@ export default{
             if(store.searchText !== ''){
                 store.myUrl += `&query=${store.searchText}`;
             }else{
-                store.myUrl += `&query=movies`;
+                store.myUrl += `&query=avengers`;
               
                 
             }
@@ -50,7 +50,7 @@ export default{
 
 </template>
 
-<style scoped lang="scss">
+<style  lang="scss">
 @use './styles/generals.scss'as *;
 @use './styles/partials/variables'as *
 </style>

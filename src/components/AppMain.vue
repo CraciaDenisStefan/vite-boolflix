@@ -15,9 +15,15 @@ export default {
 }
 </script>
 <template >
-    <div  v-for="(movie, index) in store.movies" :key="index">
-        <AppCardMovie :oneMovie="movie"/>
+    <div class="container-fluid">
+        <div class="row text-white">
+            <div class="col-3 " v-for="(movie, index) in store.movies" :key="index"> 
+                <AppCardMovie :oneMovie="movie"/>
+             </div>
+        </div>
     </div>
+    
+   
 </template>
 <style lang="scss" scoped>
     
