@@ -1,4 +1,5 @@
 export const flags={
+    //usando un api creiamo le flag da usare per la lingua
     it:"https://flagsapi.com/IT/shiny/16.png",
     fr:"https://flagsapi.com/FR/shiny/16.png",
     en:"https://flagsapi.com/GB/shiny/16.png",
