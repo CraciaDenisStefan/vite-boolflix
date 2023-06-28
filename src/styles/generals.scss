@@ -1,5 +1,6 @@
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
 @import '/node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import url("https://fonts.googleapis.com/css2?family=Belanosima&display=swap");
 *{
     margin: 0;
     padding: 0;
@@ -7,4 +8,5 @@
   }
   body{
     background-color: rgb(20, 20, 20);
+    font-family: 'Belanosima', sans-serif;
   }

@@ -28,9 +28,11 @@ export default{
             if(store.searchText !== ''){
                 //se la seach bar non e vuota allora al url del app aggiungiamo il valore di searchText
                 store.myUrl += `&query=${store.searchText}`;
+                store.lastSearch = `${store.searchText}`;
             }else{
                 //altrimenti generiamo gli avanger come titoli di default al apertura della pagina
                 store.myUrl += `&query=avengers`;
+                store.lastSearch= ''
               
                 
             }

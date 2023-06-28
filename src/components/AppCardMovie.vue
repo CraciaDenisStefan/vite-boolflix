@@ -31,9 +31,9 @@ export default {
         <div>
             <!-- Inseriamo la nostra immagine di copertina , se e presente un poster path allora lo aggiungiamo al nostro link altrimenti inseriamo un immagine interna-->
             <img v-if="oneMovie.poster_path !== null"  class="cover" :src="`https://image.tmdb.org/t/p/w342/${oneMovie.poster_path}`">
-            <img v-else class="img_no_good" src="../assets/404.jpg" alt="">
+            <img v-else class="img_no_good cover" src="../assets/404.jpg" alt="">
         </div>
-        <div  class="describtion  m-2">
+        <div class="describtion  m-2">
             <!-- nelal descrizione  inseriamo titolo, titolo originale, lingua, voto, e descrizione del film  -->
             <!-- prendendo sia serie che film ussiamo OR per dire che al titolo inseriamo o title cioe fil o name cioe serie  -->
             <h4>Title: {{ oneMovie.title || oneMovie.name}}</h4>
@@ -58,6 +58,7 @@ export default {
     box-shadow: 1px 2px 12px 3px rgba(0, 0, 0, 0.79);
     position: absolute;
     top: 5%;
+    left: 7%;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 
@@ -79,9 +80,15 @@ export default {
 }
 .position-relative:hover .describtion {
     opacity: 1;
+    transition: scale 0.5s ease-in-out;
+    &:hover{
+        background-color: rgba(58, 58, 58, 0.705);
+        scale: 1.2;    
+    }
 }
 .cover {
-    box-shadow: 0px 0px 16px 6px rgba(68, 4, 0, 0.47);
+    border-radius: 2rem;
+    box-shadow: 0px 0px 16px 6px rgba(78, 78, 78, 0.61);
     transition: filter 0.3s ease-in-out;
 }
 .img_no_good{

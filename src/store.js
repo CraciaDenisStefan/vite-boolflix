@@ -9,5 +9,6 @@ export const store = reactive({
     movies:[],
     //inseriamo in store la searchText in modo da poterla condividere con gli altri componenti 
     searchText:'',
+    lastSearch:'',
     
 })
